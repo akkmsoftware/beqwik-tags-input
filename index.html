@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="jquery.bqtagsinput.js"></script>
+    <link rel="stylesheet" href="jquery.bqtagsinput.css">
+</head>
+<body>
+    <div id="tagcontainer" class="bootstrap-tagsinput">
+
+    </div>
+
+
+    <script type="text/javascript">
+         
+        $(document).ready(function () {
+
+            $tagcontainer = $('#tagcontainer').bqTagsInput({
+                onTagsChanged: function (elm, taglist) {
+                    var elmid = $(elm).attr("id");
+
+                    for (var spatpart = 0; spatpart < taglist.length; spatpart++) {
+
+                    }
+
+                    console.log(taglist.join(''));
+                }
+            });
+
+            $tagcontainer.data('bqTagsInput').add_tag('support');
+            $tagcontainer.data('bqTagsInput').add_tag('@');
+            $tagcontainer.data('bqTagsInput').add_tag('beqwik');
+            $tagcontainer.data('bqTagsInput').add_tag('.');
+            $tagcontainer.data('bqTagsInput').add_tag('com');
+        });
+    </script>
+</body>
+</html>
